@@ -1,0 +1,9 @@
+<div class="miBorde">
+    <p>{{childName}}</p>
+    <hr>
+    <p>{{parentMessage}}</p>
+    <app-grand-child [grandFatherMessage]="parentMessage"
+                     (emitSonMessage)="receiveChildEvent($event)"></app-grand-child>
+
+    <p>{{sonMessage}}</p>
+</div>
